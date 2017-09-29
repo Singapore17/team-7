@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOT Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- styles -->
+    <link href="css/styles.css" rel="stylesheet">
+    <script src="https://use.fontawesome.com/3c4d9e255c.js"></script>
+  </head>
+  <body>
+  	<div class="header">
+	     <div class="container">
+	        <div class="row">
+	           <div class="col-md-2">
+	              <div class="navbar navbar-inverse" role="banner">
+	                  <nav class="collapse navbar-collapse bs-navbar-collapse navbar-right" role="navigation">
+	                    <ul class="nav navbar-nav">
+	                      <li class="dropdown">
+	                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Report<b class="caret"></b></a>
+	                        <ul class="dropdown-menu animated fadeInUp">
+	                          <li><a href="index.html">Matched</a></li>
+                            <li><a href="open.html">Open</a></li>
+                            <li><a href="closed.html">Closed</a></li>
+	                        </ul>
+	                      </li>
+	                    </ul>
+	                  </nav>
+	              </div>
+	           </div>
+             <div class="col-md-2">
+	              <div class="navbar navbar-inverse" role="banner">
+	                  <nav class="collapse navbar-collapse bs-navbar-collapse navbar-right" role="navigation">
+	                    <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                          <a href="#" class="dropdown-toggle tabs" data-toggle="dropdown">Personnel<b class="caret"></b></a>
+                          <ul class="dropdown-menu animated fadeInUp">
+                            <li><a href="mothers.html">Mothers</a></li>
+                            <li><a href="babysitter.html">Babysitters</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+	                  </nav>
+	              </div>
+	           </div>
+	        </div>
+	     </div>
+	</div>
+
+    <div class="page-content">
+    	<div class="row">
+
+		  <div class="col-md-10 col-md-offset-1">
+
+		  	<div class="content-box-large">
+
+          <div class="row nameHeading">
+            <!-- table of matched -->
+            <div class="col-sm-4">
+              <div>
+                <h1 id="name">
+                </h1>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6 details">
+              <div class="row detailsRow">
+                <div class='col-sm-4'>
+                  Contact Number :
+                </div>
+                <div class="col-sm-6" id="contactNumber">
+                </div>
+              </div>
+              <div class="row detailsRow">
+                <div class='col-sm-4'>
+                  Address :
+                </div>
+                <div class="col-sm-6" id="address">
+                </div>
+              </div>
+              <div class="row detailsRow">
+                <div class='col-sm-4'>
+                  Age :
+                </div>
+                <div class="col-sm-6" id="age">
+                </div>
+              </div>
+              <div class="row detailsRow hidden" id="kidDetailField">
+                <div class='col-sm-4'>
+                  Details of Kid :
+                </div>
+                <div class="col-sm-6" id="kidDetail">
+                </div>
+              </div>
+              <div class="row detailsRow hidden" id="numOfKidsField">
+                <div class='col-sm-4' >
+                  Number of kids :
+                </div>
+                <div class="col-sm-6" id="numOfKids">
+                </div>
+              </div>
+              <div class="row detailsRow hidden" id="descriptionField">
+                <div class='col-sm-4' >
+                  Description :
+                </div>
+                <div class="col-sm-6" id="description">
+                </div>
+              </div>
+              <div class="row detailsRow hidden" id="ratingField">
+                <div class='col-sm-4' >
+                  Rating :
+                </div>
+                <div class="col-sm-6" id="rating">
+                </div>
+              </div>
+              <div class="row detailsRow">
+                <div class='col-sm-4'>
+                  Preferable Fee :
+                </div>
+                <div class='col-sm-6' id="fee">
+                </div>
+              </div>
+            </div>
+            <div class='col-sm-3 col-sm-offset-1'>
+              <img src='' / id='img' class="scale">
+            </div>
+          </div>
+          <div class="row">
+            <div class='col-md-3 edit'>
+               <button type="button" class="btn btn-primary"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+            </div>
+          </div>
+
+		  	</div>
+		  </div>
+		</div>
+    </div>
+
+    <!-- <footer>
+         <div class="container">
+
+            <div class="copy text-center">
+               Copyright 2014 <a href='#'>Website</a>
+            </div>
+
+         </div>
+      </footer> -->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/profile.js"></script>
+  </body>
+</html>
