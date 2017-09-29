@@ -172,9 +172,9 @@ function processMessage(event) {
       });
     }
     else if (message.attachments) {
-      if (messages.attachements.payload.coordinates) {
-        let lat = messages.attachements.payload.coordinates.lat;
-        let long = messages.attachements.payload.coordinates.long;
+      if (message.attachements.payload.coordinates) {
+        let lat = message.attachements.payload.coordinates.lat;
+        let long = message.attachements.payload.coordinates.long;
         sendMessage(senderId, [{
           text: "Here are some of the potential babysitters that we've found for you:"
         },
