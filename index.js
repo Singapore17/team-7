@@ -41,10 +41,10 @@ app.post("/webhook", function (req, res) {
       // Iterate over each messaging event
       entry.messaging.forEach(function(event) {
         if (event.postback) {
-          // processPostback(event);
+          processPostback(event);
         } 
         else if (event.message) {
-          // processMessage(event);
+          processMessage(event);
         }
       });
     });
