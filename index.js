@@ -39,6 +39,7 @@ app.post("/webhook", function (req, res) {
     // There may be multiple entries if batched
     req.body.entry.forEach(function(entry) {
       // Iterate over each messaging event
+      console.log(entry.messaging);
       entry.messaging.forEach(function(event) {
         if (event.postback) {
           processPostback(event);
@@ -80,7 +81,7 @@ function processPostback(event) {
       }
     });
   }
-  else if (payload == "PERSON_1") {
+  else if (payload === "PERSON_1") {
     sendMessage(senderId,[
     {
       attachement: {
@@ -176,7 +177,7 @@ function processMessage(event) {
         text: "Here are some of the potential babysitters that we've found for you:"
       },
       {
-       attachment: {
+        attachment: {
         type: "template",
         payload: {
           template_type: "generic",
@@ -230,10 +231,9 @@ function processMessage(event) {
               ]
             },              
           ]
-        }
-       } 
-      }
-      ]);
+          }
+        } 
+      }]);
     }  
   }
 }
