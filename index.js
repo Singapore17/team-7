@@ -98,7 +98,7 @@ function processPostback(event) {
               buttons: [
                 {
                   type: "web_url",
-                  url: "m.me/ethano1337"
+                  url: "m.me/ethano1337",
                   title: "🙋 Chat now!"
                 }
               ]
