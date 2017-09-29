@@ -172,73 +172,68 @@ function processMessage(event) {
       });
     }
     else if (message.attachments) {
-      if (message.attachements[0].payload.coordinates) {
-        sendMessage(senderId, [{
-          text: "Here are some of the potential babysitters that we've found for you:"
-        },
-        {
-         attachment: {
-          type: "template",
-          payload: {
-            template_type: "generic",
-            elements: [
-              {
-                title: "Hong Foo Liang",
-                image_url: "https://scontent-hkg3-1.xx.fbcdn.net/v/t1.0-9/15727240_712936555546372_2638316355521030726_n.jpg?oh=a56a612f2cd88a086e9f73bb1ed2f4fb&oe=5A42E3E8",
-                subtitle: "Age: 23\nRating: 🌟🌟🌟🌟🌟\nLocation: 1km away\nFee: $5/hr",
-                buttons: [
-                  {
-                    type: "postback",
-                    title: "More details",
-                    payload: "PERSON_1"
-                  },
-                ]
-              },
-              {
-                title: "Guan Hoe",
-                image_url: "https://scontent-hkg3-1.xx.fbcdn.net/v/t1.0-9/17634573_10155151739939354_4742206191917344379_n.jpg?oh=172e1d05f4d6dca42b17b43b9fabc579&oe=5A55ABCD",
-                subtitle: "Age: 26\nRating: 🌟🌟🌟\nLocation: 2.3km away\nFee: $8/hr",
-                buttons: [
-                  {
-                    type: "postback",
-                    title: "More details",
-                    payload: "PERSON_2"
-                  },
-                ]
-              },
-              {
-                title: "Ying Nan",
-                image_url: "https://scontent-hkg3-1.xx.fbcdn.net/v/t1.0-9/1910267_1496839090551519_7162098718691837355_n.jpg?oh=c543b440eada57ee0b1a75835dd453a9&oe=5A889A97",
-                subtitle: "Age: 22\nRating: 🌟🌟🌟🌟\nLocation: 2km away\nFee: $10/hr",
-                buttons: [
-                  {
-                    type: "postback",
-                    title: "More details",
-                    payload: "PERSON_3"
-                  },
-                ]
-              },
-              {
-                title: "Shi Kai",
-                image_url: "https://scontent-hkg3-1.xx.fbcdn.net/v/t1.0-9/12195956_10153310620373915_7989852619042736054_n.jpg?oh=c0d3cef5525986be6311a217ee7c761e&oe=5A3D4822",
-                subtitle: "Age: 26\nRating: 🌟🌟\nLocation: 1.5km away\nFee: $15/hr",
-                buttons: [
-                  {
-                    type: "postback",
-                    title: "More details",
-                    payload: "PERSON_4"
-                  },
-                ]
-              },              
-            ]
-          }
-         } 
+      sendMessage(senderId, [{
+        text: "Here are some of the potential babysitters that we've found for you:"
+      },
+      {
+       attachment: {
+        type: "template",
+        payload: {
+          template_type: "generic",
+          elements: [
+            {
+              title: "Hong Foo Liang",
+              image_url: "https://scontent-hkg3-1.xx.fbcdn.net/v/t1.0-9/15727240_712936555546372_2638316355521030726_n.jpg?oh=a56a612f2cd88a086e9f73bb1ed2f4fb&oe=5A42E3E8",
+              subtitle: "Age: 23\nRating: 🌟🌟🌟🌟🌟\nLocation: 1km away\nFee: $5/hr",
+              buttons: [
+                {
+                  type: "postback",
+                  title: "More details",
+                  payload: "PERSON_1"
+                },
+              ]
+            },
+            {
+              title: "Guan Hoe",
+              image_url: "https://scontent-hkg3-1.xx.fbcdn.net/v/t1.0-9/17634573_10155151739939354_4742206191917344379_n.jpg?oh=172e1d05f4d6dca42b17b43b9fabc579&oe=5A55ABCD",
+              subtitle: "Age: 26\nRating: 🌟🌟🌟\nLocation: 2.3km away\nFee: $8/hr",
+              buttons: [
+                {
+                  type: "postback",
+                  title: "More details",
+                  payload: "PERSON_2"
+                },
+              ]
+            },
+            {
+              title: "Ying Nan",
+              image_url: "https://scontent-hkg3-1.xx.fbcdn.net/v/t1.0-9/1910267_1496839090551519_7162098718691837355_n.jpg?oh=c543b440eada57ee0b1a75835dd453a9&oe=5A889A97",
+              subtitle: "Age: 22\nRating: 🌟🌟🌟🌟\nLocation: 2km away\nFee: $10/hr",
+              buttons: [
+                {
+                  type: "postback",
+                  title: "More details",
+                  payload: "PERSON_3"
+                },
+              ]
+            },
+            {
+              title: "Shi Kai",
+              image_url: "https://scontent-hkg3-1.xx.fbcdn.net/v/t1.0-9/12195956_10153310620373915_7989852619042736054_n.jpg?oh=c0d3cef5525986be6311a217ee7c761e&oe=5A3D4822",
+              subtitle: "Age: 26\nRating: 🌟🌟\nLocation: 1.5km away\nFee: $15/hr",
+              buttons: [
+                {
+                  type: "postback",
+                  title: "More details",
+                  payload: "PERSON_4"
+                },
+              ]
+            },              
+          ]
         }
-        ])
+       } 
       }
-      else{
-        sendMessage(senderId, [{text: "Sorry, I don't understand your request."}]);
-      }
+      ]);
     }  
   }
 }
