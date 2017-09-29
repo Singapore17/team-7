@@ -121,6 +121,7 @@ function processMessage(event) {
             if (uniqueId == "mommy1") {
               // case where mother is accessing
               currentUser.currentState = 1;
+              updateDocument(currentUser, currentUser._id);
               sendMessage(senderId, [{text: "How many kids do you need help with? (At most 3 children)"}]);
             }
             else if (uniqueId == "babysitter1") {
