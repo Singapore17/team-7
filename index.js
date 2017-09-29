@@ -87,8 +87,8 @@ function processPostback(event) {
         type: "template",
         payload: {
           template_type: "button",
-          text: "About me: I have 10 years of experience in baby-sitting. I'll make sure your children gets the best care possible.\
-\nNumber of kids under babysitter: 2\nThings to look out for: I have a cat at home. I'm very strict when it comes to hygiene.",
+          text: "About me: I have 10 years of experience in baby-sitting. I'll make sure your children gets the best\
+ care possible.\nNumber of kids under babysitter: 2\nThings to look out for: I have a cat at home. I'm very strict when it comes to hygiene.",
           buttons: [
             {
               type: "web_url",
@@ -99,7 +99,7 @@ function processPostback(event) {
         }
       }
     }
-    ]),
+    ]);
   }
 }
 
