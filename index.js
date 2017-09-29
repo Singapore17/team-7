@@ -109,6 +109,14 @@ function processPostback(event) {
     sendMessage(senderId, [
       {
         attachment: {
+          type: "image",
+          payload: {
+            url: "https://scontent-hkg3-1.cdninstagram.com/t51.2885-15/e35/21985414_1500585076698652_3013494946322710528_n.jpg",
+          }
+        }
+      },
+      {
+        attachment: {
           type: "template",
           payload: {
             template_type: "button",
