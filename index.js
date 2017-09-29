@@ -62,7 +62,6 @@ app.post("/webhook", function (req, res) {
 function processPostback(event) {
   let senderId = event.sender.id;
   let payload = event.postback.payload;
-  console.log("PAYLOAD: " + payload);
 
   if (payload === "Greeting") {
     // Get user's first name from the User Profile API
@@ -88,6 +87,7 @@ function processPostback(event) {
     });
   }
   else if (payload === "PERSON_1") {
+    console.log("HIT HERE");
     sendMessage(senderId,[
     {
       attachement: {
