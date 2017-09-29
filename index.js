@@ -41,12 +41,17 @@ app.post("/webhook", function (req, res) {
       // Iterate over each messaging event
       console.log(entry.messaging);
       entry.messaging.forEach(function(event) {
-        if (event.postback) {
-          processPostback(event);
-        } 
-        else if (event.message) {
-          processMessage(event);
+        try{
+          if (event.postback) {
+            processPostback(event);
+          } 
+          else if (event.message) {
+            processMessage(event);
+          }          
+        } catch (err) {
+          console.log("error");
         }
+
       });
     });
 
@@ -57,6 +62,7 @@ app.post("/webhook", function (req, res) {
 function processPostback(event) {
   let senderId = event.sender.id;
   let payload = event.postback.payload;
+  console.log("PAYLOAD: " + payload;)
 
   if (payload === "Greeting") {
     // Get user's first name from the User Profile API
