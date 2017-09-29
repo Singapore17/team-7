@@ -90,7 +90,7 @@ function processPostback(event) {
     console.log("HIT HERE");
     sendMessage(senderId, [
       {
-        attachement: {
+        attachment: {
           type: "template",
           payload: {
             template_type: "button",
