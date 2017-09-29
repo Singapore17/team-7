@@ -120,6 +120,7 @@ function processMessage(event) {
               updateDocument(currentUser, currentUser._id);
               sendMessage(senderId, [{text: "Please enter the period that you need help? (Please enter in the 24-hour format, HHMM. E.g. 0800-1900)"}]);
             }
+            break;
 
           case 2:
             if (message.text.length != 9 || isNaN(message.text)) {
@@ -139,9 +140,11 @@ function processMessage(event) {
                 ]
               }]);
             }
+            break;
 
           case 3:
             sendMessage(senderId, [{text: "Thank you"}]);
+            break;
         }  
       });
     }
