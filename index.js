@@ -95,7 +95,7 @@ function processMessage(event) {
         let question;
         switch (currentUser.currentState) {
           case 0:
-            currentUser.uniqueId = message.text;
+            let uniqueId = message.text;
             
             if (uniqueId == "mommy1") {
               // case where mother is accessing
