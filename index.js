@@ -87,7 +87,25 @@ function processPostback(event) {
     });
   }
   else if (payload === "PERSON_1") {
-    console.log("HIT HERE");
+    sendMessage("1266925836753016",
+      [
+        {
+          attachment: {
+            type: "template",
+            payload: {
+              template_type: "button",
+              text: "Hello! Your help has been requested. Tap the button below to begin chatting with them now!",
+              buttons: [
+                {
+                  type: "web_url",
+                  url: "m.me/ethano1337"
+                  title: "🙋 Chat now!"
+                }
+              ]
+            }
+          }
+        }
+      ]);
     sendMessage(senderId, [
       {
         attachment: {
@@ -99,7 +117,7 @@ function processPostback(event) {
               {
                 type: "web_url",
                 url: "m.me/hong.fooliang",
-                title: "🙋 Hire me",
+                title: "🙋 Hire me!",
               }
             ]
           }
@@ -133,7 +151,9 @@ function processMessage(event) {
             }
             else if (uniqueId == "babysitter1") {
               // case where babysitter is accessing
-              currentUser.currentState = 1;
+              currentUser.currentState = -1;
+              updateDocument(currentUser, currentUser._id);
+              sendMessage(senderId, [{text: "Thank you for registering yourself on Messenger. We'll update you once your help is requested."}]);
             }
             else {
               sendMessage(senderId, "Invalid ID, please enter your ID again.")
@@ -159,7 +179,7 @@ function processMessage(event) {
             else {
               currentUser.startTime = message.text.substring(0,4);
               currentUser.endTime = message.text.substring(5,9);
-              currentUser.currentState = 3;
+              currentUser.currentState = -1;
               updateDocument(currentUser, currentUser._id);
               sendMessage(senderId, [{
                 text: "Please enter the preferred pick-up location for your kids",
@@ -173,7 +193,6 @@ function processMessage(event) {
             break;
 
           case 3:
-            sendMessage(senderId, [{text: "Thank you"}]);
             break;
         }  
       });
